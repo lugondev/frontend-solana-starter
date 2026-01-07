@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9945FF;
+  --color-primary-dark: #7920E0;
+  --color-primary-light: #B97EFF;
+  --color-secondary: #14F195;
+  --color-secondary-dark: #00D17C;
+  --color-secondary-light: #4FFAAE;
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+.wallet-adapter-button {
+  background-color: #9945FF !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.wallet-adapter-button:hover:not([disabled]) {
+  background-color: #7920E0 !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #9945FF !important;
+}

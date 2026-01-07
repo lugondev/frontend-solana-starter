@@ -1,0 +1,44 @@
+{
+  "name": "solana-web3-starter",
+  "version": "1.0.0",
+  "description": "Next.js 16.1.1 starter with Solana Web3.js integration",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "nextjs",
+    "solana",
+    "web3",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.2",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/wallet-adapter-wallets": "^0.19.37",
+    "@solana/web3.js": "^1.98.4",
+    "clsx": "^2.1.1",
+    "next": "16.1.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "swr": "^2.3.8",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "tailwindcss": "4.1.18",
+    "typescript": "^5.9.3"
+  }
+}

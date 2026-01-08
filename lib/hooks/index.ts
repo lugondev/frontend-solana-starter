@@ -2,6 +2,7 @@ export { useTreasury } from './use-treasury';
 export { useTokenOperations } from './use-token-operations';
 export { useRoleManagement, RoleType } from './use-role-management';
 export { useNFTMarketplace } from './use-nft-marketplace';
+export { useNFTCollection } from './use-nft-collection';
 export { useGovernance } from './use-governance';
 export { useStarterProgram } from './use-starter-program';
 export { useCounterProgram } from './use-counter-program';

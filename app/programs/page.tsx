@@ -7,6 +7,8 @@ import { TreasuryManagement } from '@/components/features/starter/treasury-manag
 import { TokenOperations } from '@/components/features/starter/token-operations';
 import { RoleManagement } from '@/components/features/starter/role-management';
 import { NFTMarketplace } from '@/components/features/starter/nft-marketplace';
+import { NFTCollection } from '@/components/features/starter/nft-collection';
+import { Governance } from '@/components/features/starter/governance';
 
 export default function ProgramsPage() {
   return (
@@ -38,10 +40,24 @@ export default function ProgramsPage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Roles & NFT Marketplace</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <h2 className="text-2xl font-bold mb-4">Role Management</h2>
+        <div className="grid grid-cols-1 gap-6">
           <RoleManagement />
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">NFT Features</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <NFTCollection />
           <NFTMarketplace />
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Governance System</h2>
+        <div className="grid grid-cols-1 gap-6">
+          <Governance />
         </div>
       </div>
 
@@ -57,16 +73,24 @@ export default function ProgramsPage() {
             withdraw (admin only).
           </p>
           <p>
-            <strong>Token Operations:</strong> Create mints, burn tokens, approve
-            delegates, freeze accounts, and manage SPL tokens.
+            <strong>Token Operations:</strong> Create mints, transfer tokens, burn tokens, 
+            approve delegates, freeze accounts, and manage SPL tokens.
           </p>
           <p>
             <strong>Role Management:</strong> Assign roles (Admin, Moderator, User)
             and check permissions for access control.
           </p>
           <p>
-            <strong>NFT Marketplace:</strong> Create offers, accept offers, and cancel
-            listings with escrow-based secure trading.
+            <strong>NFT Collection:</strong> Create NFT collections with metadata, royalties, 
+            and mint NFTs with creator attribution.
+          </p>
+          <p>
+            <strong>NFT Marketplace:</strong> List NFTs for sale, buy NFTs, create offers, 
+            accept offers, and cancel listings with escrow-based secure trading.
+          </p>
+          <p>
+            <strong>Governance:</strong> On-chain governance with proposal creation, voting, 
+            execution, and upgrade authority management for program upgrades.
           </p>
           <p>
             <strong>Cross-Program Invocation:</strong> starter_program can call

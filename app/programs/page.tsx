@@ -3,6 +3,10 @@
 import { CounterDisplay } from '@/components/features/counter/counter-display';
 import { UserAccount } from '@/components/features/starter/user-account';
 import { CrossProgramDemo } from '@/components/features/starter/cross-program-demo';
+import { TreasuryManagement } from '@/components/features/starter/treasury-management';
+import { TokenOperations } from '@/components/features/starter/token-operations';
+import { RoleManagement } from '@/components/features/starter/role-management';
+import { NFTMarketplace } from '@/components/features/starter/nft-marketplace';
 
 export default function ProgramsPage() {
   return (
@@ -10,36 +14,63 @@ export default function ProgramsPage() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">Solana Programs Demo</h1>
         <p className="text-gray-600">
-          Interact with starter_program and counter_program on Solana
+          Interact with all starter_program features and counter_program
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <UserAccount />
-        <CounterDisplay />
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Core Features</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <UserAccount />
+          <CounterDisplay />
+        </div>
+        <div className="mb-6">
+          <CrossProgramDemo />
+        </div>
       </div>
 
-      <div className="mb-6">
-        <CrossProgramDemo />
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Treasury & Token Management</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <TreasuryManagement />
+          <TokenOperations />
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Roles & NFT Marketplace</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <RoleManagement />
+          <NFTMarketplace />
+        </div>
       </div>
 
       <div className="p-6 bg-blue-50 rounded-lg">
-        <h2 className="text-xl font-semibold mb-3">About These Programs</h2>
+        <h2 className="text-xl font-semibold mb-3">About Starter Program</h2>
         <div className="space-y-2 text-sm text-gray-700">
           <p>
-            <strong>User Account (starter_program):</strong> Demonstrates PDA
-            (Program Derived Address) patterns for user account management.
-            Create, update, and close your on-chain user account.
+            <strong>User Account:</strong> PDA-based user account management with
+            create, update, and close operations.
           </p>
           <p>
-            <strong>Counter Program (counter_program):</strong> A simple counter
-            with increment, decrement, add, and reset operations. Shows basic
-            state management and cross-program invocation patterns.
+            <strong>Treasury:</strong> Deposit SOL to program treasury and emergency
+            withdraw (admin only).
           </p>
           <p>
-            <strong>Cross-Program Invocation:</strong> Demonstrates how
-            starter_program can call counter_program instructions via CPI,
-            enabling program composability on Solana.
+            <strong>Token Operations:</strong> Create mints, burn tokens, approve
+            delegates, freeze accounts, and manage SPL tokens.
+          </p>
+          <p>
+            <strong>Role Management:</strong> Assign roles (Admin, Moderator, User)
+            and check permissions for access control.
+          </p>
+          <p>
+            <strong>NFT Marketplace:</strong> Create offers, accept offers, and cancel
+            listings with escrow-based secure trading.
+          </p>
+          <p>
+            <strong>Cross-Program Invocation:</strong> starter_program can call
+            counter_program instructions via CPI for program composability.
           </p>
         </div>
       </div>
